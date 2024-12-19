@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Übung</title>
+</head>
+<body>
+    <head>
+        <h1>Bitte Füllen Sie das Formular komplett aus</h1>
+    </head>
+    
+    <main>
+        <h2>Persöhnliche Daten</h2>
+    
+        <form action="auswertung.php" method="POST">
+            
+            <label for="VN">Vorname:  </label>
+            <input type="text" name="Vorname" id="VN"> <br> <br>
+            <label for="NN">Nachname: </label>
+            <input type="text" name="Nachname" id="NN"> <br> <br>
+            <label for="WO">Wohnort: </label>
+            <input type="text" name="Wohnort" id="WO"> <br> <br>
+
+
+            <h2>Was wir wissen wollen</h2>
+
+            <label for="#">Wo wohnen Sie? </label>
+            
+            <input type="radio" name="Wohnen" id="EH">
+            <label for="#">Einfamilienhaus</label>
+
+            <input type="radio" name="Wohnen" id="EW">
+            <label for="#">Eigentumswohnung</label>
+
+            <input type="radio" name="Wohnen" id="MH">
+            <label for="#">Mehrfamilienhaus</label>
+
+            <br> <br>
+
+            <label for="#">Welche TV-Sendungen sehen Sie gern?</label>
+
+            <input type="checkbox" name="dk" id="DK">
+            <label for="#">Dokumentationen</label>
+
+            <input type="checkbox" name="nr" id="NR">
+            <label for="#">Nachrichten</label>
+
+            <input type="checkbox" name="sf" id="SF">
+            <label for="#">Spielefilme</label>
+
+            <input type="checkbox" name="sp" id="SP">
+            <label for="#">Sport</label>
+
+            <br> <br>
+
+            <label for="#">Haben Sie noch eine Nachricht für uns?</label>
+            <textarea name="txtArea" id="TA" rows="5"   ></textarea>
+
+            <br> <br>
+
+            <input type="submit" value="Daten Speichern">
+            <input type="reset" value="Zurücksetzten">
+
+        </form>
+    </main>
+</body>
+</html>
