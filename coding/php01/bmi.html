@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+<main>
+    <h1>Hier können Sie Ihren Body-Mass-Index berechnen:</h1>
+
+    <form action="bmi.php" method="POST">
+        <label for="Koerpergewicht">Körpergewicht in kg:</label>
+        <input type="text" name="koerpergewicht" id="Koerpergewicht">
+        <br>
+        <label for="Körpergröße">Körpergröße in m: </label>
+        <input type="text" name="koerpergroeße" id="Körpergröße">
+        <br>
+        <input type="submit" value="Ausrechnen">
+        <input type="button" value="Löschen">
+        
+    </form>
+
+    <div>
+        <h2>AUSWERTUNG</h2>
+        <h3>Ihr BMI beträgt</h3>
+    </div>
+</main>
+</body>
+</html>
