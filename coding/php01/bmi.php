@@ -7,5 +7,7 @@ echo $gewicht;
 echo "<br>";
 echo $groesse;
 
-$BMI = $gewicht / $groesse * $BMI;
+$BMI = $gewicht / ($groesse * $groesse);
+
+echo $BMI;
 ?>
