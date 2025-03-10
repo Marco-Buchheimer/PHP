@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apfelpreis</title>
+</head>
+<body>
+<h1>Apfelpreis</h1>
+
+
+<form method="post" action="apfel.php">
+    <label for="Apfelsorte">Apfelsorte:</label>
+    <select name="apfelsorte" id="Apfelsorte">
+        <option value="Bitte wählen">Bitte wählen</option>
+        <option value="Jonagold">Jonagold</option>
+        <option value="Delicious">Delicious</option>
+        <option value="Gala">Gala</option>
+        <option value="Elstar">Elstar</option>
+    </select>
+    <br> <br>
+    <label for="Kg">Anzahl in KG:</label>
+    <input type="number" name="kg" id="Kg">
+    <br> <br>
+    <input type="submit" value="Preisvorschau anzeigen">
+
+</form>
+
+</body>
+</html>
