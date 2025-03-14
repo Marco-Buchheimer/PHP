@@ -1,0 +1,20 @@
+Übersicht der Variablen
+
+html
+
+vorname
+zuname
+straße
+Hnummer
+plz
+ort
+mail
+telefon
+
+Anz_Erw
+Anz_Kin
+Haustiere
+
+zimmer1
+
+user_eingabe

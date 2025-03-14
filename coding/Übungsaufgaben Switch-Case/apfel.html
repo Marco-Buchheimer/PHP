@@ -13,8 +13,8 @@
 
 <form method="post" action="apfel.php">
     <label for="Apfelsorte">Apfelsorte:</label>
-    <select name="apfelsorte" id="Apfelsorte">
-        <option value="Bitte wählen">Bitte wählen</option>
+    <select name="apfelsorte" id="Apfelsorte" required>
+        <option value="#" disabled selected>Bitte wählen</option>
         <option value="Jonagold">Jonagold</option>
         <option value="Delicious">Delicious</option>
         <option value="Gala">Gala</option>
@@ -22,7 +22,7 @@
     </select>
     <br> <br>
     <label for="Kg">Anzahl in KG:</label>
-    <input type="number" name="kg" id="Kg">
+    <input type="number" name="kg" id="Kg" required>
     <br> <br>
     <input type="submit" value="Preisvorschau anzeigen">
 

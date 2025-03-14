@@ -1,0 +1,88 @@
+/* ===========================================
+
+   -------------------------------------------
+   ! HINWEIS !
+   -------------------------------------------
+   Diese Ergebnis-Datei ist nur ein Beispiel
+   Sinn der Aufgabe zum Kapitel 13 ist es, ein
+   ein eigenes Layout zu verwirklichen.
+   Daher kann diese Ergebnis-Datei nicht zur
+   Überprüfung Ihrer eigenen Arbeit dienen.    
+
+   ============================================ */
+
+body {
+	max-width: 40em; /* Begrenzt die Breite und verhindert so unangenehm lange Zeilen */
+	font-family: Helvetica, Arial, Geneva, sans-serif;
+	background-color: #ffeedd;
+}
+
+/* Ueberschriften
+   - - - - - - - - */
+
+h1, h3, h5 {
+	color: #006600;
+}
+h2, h4, h6 {
+	color: #660000;;
+}
+h1,h2 {
+	font-family: Times, "Times New Roman", serif;
+}
+
+/* Links
+   - - - - - */
+
+a:link {
+	color: #660000;
+}
+a:visited {
+	color: #666;
+}
+
+/* Tabellen
+   - - - - -
+
+   Beispiele für Tabellen sehen Sie auf tabelle.html und speisekarte.html */
+
+
+table {
+	background-color: #ffffff;
+}
+th {
+	text-align: left;
+	font-weight: normal;
+	color: #ffe4c4;
+	background-color: #aa5500;
+}
+tr:nth-child(2n) {
+	background-color: rgba(210, 180, 140,0.25); /* Gibt die Farben rot, gruen, blau und die Transparenz an (Wert muss zwischen 0 und 1 liegen) */
+}
+th, td {
+	padding: 0.25em;
+}
+li {
+	margin: 0.25em; /* Aussenabstaende geben ein wenig Platz um die Listenpunkte
+	                   so dass auch mehrzeilige Listeneintraege als zusammengehöriger
+	                   Text erkennbar sind */
+}
+
+/* Zitate
+   - - - - -
+
+   Ein Beispiel für Zitate sehen Sie auf der Seite index.html */
+
+blockquote {
+	margin: 1.5em 0; /* Mit margin wird der Aussenabstand angegeben. Werden zwei Werte angegeben,
+	                    steht der erste für die Abstaende oben und unten, der zweite Wert
+	                    fuer die Abstaende an den Seiten (also rechts und links) */
+	border: 6px double #d2b48c; /* Der Wert "double" sorgt fuer eine doppelte Rahmenlinie */
+	border-radius: 8px; /* sorgt für abgerundete Ecken */
+	padding: 0.5em;
+	font-family: Times, "Times New Roman", serif;
+	font-style: italic;  /* Erzeugt kursive Schrift */
+	font-weight: bold;   /* Erzeugt fette Schrift */
+	text-align: center;
+	color: #666;
+	background-color: rgba(255, 255, 255, 0.75);
+}

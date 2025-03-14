@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>  
+    	<meta charset="utf-8">
+
+	<title>Hotel Vallora - Online Buchung</title>
+
+	<link rel="stylesheet" type="text/css" href="../stylesheets/meinestyles.css">
+
+  </head>
+
+  <body>
+	<h1>Buchungsseite des Hotels Vallora</h1>
+
+	<form action="buchung.php" method="post">
+
+	<h3>1. Zimmerpreise und Rabatte</h3>
+	<p>Preise gelten pro Zimmer und Übernachtung. Bei der Buchung eines Mehrbettzimmers wird nach Personenzahl berechnet.</p>
+	<table>
+		<tr>
+			<th>Einzelzimmer:</th>
+			<th>85€</th>
+		</tr>
+		<tr>
+			<th>Doppelzimmer (Kategorie 1):</th>
+			<th>136€</th>
+		</tr>
+		<tr>
+			<th>Doppelzimmer (Kategorie 2):</th>
+			<th>170€</th>
+		</tr>
+		<tr>
+			<th>Mehrbettzimmer:</th>
+			<th>70€ p.P. Erwachsene
+				<p>40€ p.P. Kinder</p>
+				<p> ab 3 Erwachsenen 30% Rabatt</p>
+				<p> ab 2 Kindern 50% Rabatt</p>
+				<p><p> (Rabatte gelten aud die gesamten Einzelpreise p.P./Nacht)</p>
+			</th>
+		</tr>
+		<tr>
+			<th>Aufschlag Haustiere:</th>
+			<th>15€</th>
+		</tr>
+	</table>
+
+	<h3>2. Zeitraum der Übernachtungen</h3>
+
+	<table>
+		<tr>
+			<th>Anreisedatum:</th>
+			<th>Anzahl der Übernachtungen</th>
+		</tr>
+		<tr>
+			<th><input type="date" name="anreise"></th>
+			<th><input name="naechte" type="text"></th>
+		</tr>
+	</table>
+
+
+	
+
+	<h3>3. Persönliche Daten und Rechnungsadresse</h3>
+		<!--Erfassung der persönlichen Daten-->
+		<p>Vorname: <input name="vorname" type="text" size="30" maxlength="30"></p>
+		<p>Nachname: <input name="zuname" type="text" size="30" maxlength="40"></p>
+		<p>Straße: <input name="straße" type="text" size="30" maxlength="40">    
+			Nr.:	<input name="Hnummer" type="number" size="3" maxlength="10"></p>
+		<p>PLZ: <input name="plz" type="text" size="30" maxlength="40"></p> 
+		<p>Ort:	<input name="ort" type="text" size="30" maxlength="40"></p>
+		<p>E-Mail-Adresse: <input name="mail" type="text" size="30" maxlength="40"></p>
+		<p>Telefon (für Rückfragen): <input name="telefon" type="text" size="30" maxlength="40"></p>
+
+
+	<h3>4. Anzahl der Gäste</h3>
+	<!-- Auswahl der Gästeanzahl plus Haustiere -->
+		<table>
+			<tr>
+				<th>Erwachsene:</th>
+				<th>	
+					<select name="Anz_Erw">
+						<option>0</option>
+						<option selected>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</th>
+			</tr>
+			<tr>
+				<th>Kinder:</th>
+				<th>	
+					<select name="Anz_Kin">
+						<option selected>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</th>
+			</tr>
+			<tr>
+				<th>Haustiere (ja/nein):</th>
+				<th>	
+					<select name="Haustiere">
+						<option selected>keine Haustiere</option>
+						<option>Ja</option>
+						<option>Nein</option>
+					</select>
+				</th>
+			</tr>
+		</table>
+
+	<h3>5. Zimmerauswahl</h3>
+	<!-- Auswahl der benötigten Zimmer -->
+	Bitte die gewünsche Zimmerart auswählen:
+		<table>
+			<tr>
+				<th>Zimmer:</th>
+				<th>
+					<select name="zimmer1">
+					<option selected>Einzelzimmer</option>
+					<option>Doppelzimmer (Kategorie 1)</option>
+					<option>Doppelzimmer (Kategorie 2)</option>
+					<option>Mehrbettzimmer</option>
+				</select></th>
+			</tr>
+		</table>
+
+	<h3>6. Ihre persönliche Nachricht:</h3>
+	<!-- Freifeld um persönliche Wünsche zu äußern -->
+   	<p> Haben Sie noch Wünsche? Teilen Sie es uns mit:<br>
+	    <textarea name="user_eingabe" cols="50" rows="6"></textarea></p>
+
+	<p><input type="submit" name="submit" value="Buchung Abschließen">
+
+ 	</form>
+
+	<p><a href="../index.html">Zurück zur Startseite</a></p>
+
+  </body>
+
+</html>
+
+
+

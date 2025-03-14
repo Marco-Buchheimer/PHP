@@ -3,33 +3,29 @@ $apfelsorte = $_POST['apfelsorte'];
 $mengeInKG=$_POST['kg'];
 
 $Apfelsorte = "default";
-$pJonagold = 1.50;
-$pDelicious = 1.60;
-$pGala = 1.65;
-$pElstar = 2.00;
+$pJonagold = 1.50 * $mengeInKG;
+$pDelicious = 1.60 * $mengeInKG;
+$pGala = 1.65 * $mengeInKG;
+$pElstar = 2.00 * $mengeInKG;
 
 
 switch ($apfelsorte) {
     case $apfelsorte == "Jonagold":
-        $Apfelsorte = "Jonagold";
+        $Apfelsorte = "Der Preis für $apfelsorte beträgt $pJonagold €";
         break;
     case $apfelsorte == "Delicious":
-        $Apfelsorte = "Delicious";
+        $Apfelsorte = "Der Preis für $apfelsorte beträgt $pDelicious €";
         break;
     case $apfelsorte == "Gala":
-        $Apfelsorte = "Gala";
+        $Apfelsorte = "Der Preis für $apfelsorte beträgt $pGala €";
         break;
     case $apfelsorte == "Elstar":
-        $Apfelsorte = "Elstar";
+        $Apfelsorte = "Der Preis für $apfelsorte beträgt $pElstar €";
         break;
     default:
-        echo "Nix gut";
-}
+        $Apfelsorte = "Fehler";
+        }
 
 echo $Apfelsorte;
 
-
-
-echo "<br>";
-echo $mengeInKG;
 ?>
