@@ -23,7 +23,11 @@ $zimmerpreis = "0.00";
 $preis_Einzelzimmer = "85";
 $preis_DoppelzimmerK1 = "136";
 $preis_DoppelzimmerK2 = "170";
-$preis_Mehrbettzimmer ="70 pP";
+$preis_Mehrbettzimmer ="70";
+$rabatt_MehrbettzimmerErw = "30";
+$rabatt_MehrbettzimmerKin = "50";
+$preis_Mehrbettzimmer_Erw = "70";
+$preis_Mehrbettzimmer_Kin = "40";
 
 $user_eingabe = $_POST["user_eingabe"];
 
@@ -38,7 +42,7 @@ elseif($Haustiere == "keine Haustiere"){
 }
 
 
-switch($zimmer1){
+switch($zimmer1) {
     case "Einzelzimmer":
         $zimmerart = "Einzelzimmer";
         $zimmerpreis = $preis_Einzelzimmer;
@@ -55,10 +59,29 @@ switch($zimmer1){
         $zimmerart = "Mehrbettzimmer";
         $zimmerpreis = $preis_Mehrbettzimmer;
         break;
-        default:
-            $zimmerart = "Einzelzimmer";
-            $zimmerpreis = $preis_Einzelzimmer;
+    default:
+        $zimmerart = "Einzelzimmer";
+        $zimmerpreis = $preis_Einzelzimmer;
 }
+
+    if($preis_Mehrbettzimmer && $Anz_Erw >= 3) {
+        $zimmerpreis = $Anz_Erw * $preis_Mehrbettzimmer_Erw * (1 - $rabatt_MehrbettzimmerErw / 100);
+    }
+    elseif($preis_Mehrbettzimmer && $Anz_Erw <= 3) {
+        $zimmerpreis = $Anz_Erw * $preis_Mehrbettzimmer_Erw;
+    }
+
+
+    if($zimmerart == "Mehrbettzimmer" && $Anz_Kin >= 2) {
+        $zimmerpreis = $Anz_Kin * $preis_Mehrbettzimmer_Kin * (1 - $rabatt_MehrbettzimmerKin / 100);
+    }
+    elseif($zimmerart == "Mehrbettzimmer" && $Anz_Kin <= 1) {
+        $zimmerpreis = $Anz_Kin * $preis_Mehrbettzimmer_Kin;
+    }
+
+
+
+
 ?>
 
 
@@ -102,7 +125,7 @@ echo "Ort: $ort";
 echo "<br>";
 echo "E-Mail: $mail";
 echo "<br>";
-echo "Telefon: $telefon";
+echo "Telefon (für Rückfragen): $telefon";
 
 
 echo "<br> <br>";
