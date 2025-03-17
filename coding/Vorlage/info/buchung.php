@@ -19,7 +19,7 @@ $status_Haustiere = "false";
 $zimmer1 = $_POST["zimmer1"];
 $zimmerart = "";
 
-$zimmerpreis = "0.00";
+$zimmerpreis = "";
 $preis_Einzelzimmer = "85";
 $preis_DoppelzimmerK1 = "136";
 $preis_DoppelzimmerK2 = "170";
@@ -28,11 +28,12 @@ $rabatt_MehrbettzimmerErw = "30";
 $rabatt_MehrbettzimmerKin = "50";
 $preis_Mehrbettzimmer_Erw = "70";
 $preis_Mehrbettzimmer_Kin = "40";
+$preis_Haustiere = "15";
 
 $user_eingabe = $_POST["user_eingabe"];
 
 if($Haustiere == "Ja"){
-    $status_Haustiere = "Haustiere: <br> Preis: 00.00€ <br> <br>";
+    $status_Haustiere = "Haustiere: <br> Preis: $preis_Haustiere € <br> <br>";
 }
 elseif($Haustiere == "Nein"){
     $status_Haustiere = "<br> <br>";
