@@ -11,7 +11,6 @@ $ort = $_POST["ort"];
 $mail = $_POST["mail"];
 $telefon = $_POST["telefon"];
 
-
 $Anz_Erw = $_POST["Anz_Erw"];
 $Anz_Kin = $_POST["Anz_Kin"];
 $Haustiere = $_POST["Haustiere"];
